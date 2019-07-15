@@ -1,0 +1,7 @@
+{
+  "chromeWebSecurity": false,
+  "supportFile": "cypress/support/index.ts",
+  "defaultCommandTimeout": 60000,
+  "watchForFileChanges": false,
+  "video": false
+}

@@ -1,0 +1,39 @@
+{
+  "name": "cypress-example-typescript-webpack",
+  "version": "1.0.0",
+  "description": "Example showing TypeScript tests with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo",
+    "cypress:run": "./node_modules/.bin/cypress run",
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cy:run": "./node_modules/.bin/cypress run",
+    "cy:open": "./node_modules/.bin/cypress open",
+    "build": "./node_modules/.bin/webpack --mode development --output-filename out.js --entry ./cypress/integration/*spec.ts",
+    "lint": "./node_modules/.bin/tslint --project ./tsconfig.json",
+    "postlint": "npm run tsc",
+    "tsc": "./node_modules/.bin/tsc --pretty --noEmit",
+    "precypress:run": "npm run lint",
+    "precy:run": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sample.git"
+  },
+  "author": "Anand Ganesh",
+  "license": "MIT",
+  "homepage": "https://github.com/sample#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^2.0.0",
+    "@types/chai": "4.1.3",
+    "@types/mocha": "^5.0.0",
+    "awesome-typescript-loader": "^5.0.0",
+    "cypress": "3.0.1",
+    "tslint": "^5.10.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "typescript": "^2.9.1",
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.0.3"
+  }
+}
